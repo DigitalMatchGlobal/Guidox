@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de gestión — Guidox</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-body">
+  <aside class="dashboard-sidebar" id="sidebar">
+    <a class="brand dashboard-brand" href="index.html"><span class="brand-mark">G</span><span>Guidox<small>gestión</small></span></a>
+    <nav class="dashboard-nav" aria-label="Secciones del panel">
+      <button class="active" data-view="resumen"><span>⌂</span> Resumen</button>
+      <button data-view="productos"><span>▦</span> Productos y precios</button>
+      <button data-view="ventas"><span>▣</span> Ventas y caja</button>
+      <button data-view="stock"><span>□</span> Stock</button>
+      <button data-view="balanza"><span>⚖</span> Balanza y etiquetas</button>
+      <button data-view="mayorista"><span>☷</span> Lista mayorista</button>
+      <button data-view="pedidos"><span>▤</span> Pedidos</button>
+      <button data-view="equipo"><span>♙</span> Equipo y permisos</button>
+    </nav>
+    <div class="sidebar-help"><span>¿Necesitás ayuda?</span><p>Digital Match acompaña la puesta en marcha.</p><button type="button">Hablar con soporte</button></div>
+    <a class="sidebar-logout" href="login.html">↪ Cerrar sesión</a>
+  </aside>
+
+  <div class="dashboard-main">
+    <header class="dashboard-topbar">
+      <button class="dashboard-menu" type="button" aria-label="Abrir navegación">☰</button>
+      <div class="topbar-title"><span id="mobile-section-label">Resumen</span><small>Última sincronización: hoy 09:42</small></div>
+      <div class="topbar-actions"><button class="icon-button" aria-label="Notificaciones">♢<i></i></button><div class="user-chip"><span>GK</span><div><strong>Guido</strong><small>Administrador</small></div></div></div>
+    </header>
+
+    <main class="dashboard-content">
+      <section class="dashboard-view active" id="view-resumen">
+        <div class="dashboard-heading"><div><span class="eyebrow dark">DOMINGO 28 DE JUNIO</span><h1>Buen día, Guido.</h1><p>Esto es lo que está pasando en el negocio.</p></div><button class="dashboard-primary" data-go="productos">+ Actualizar precios</button></div>
+        <div class="stats-grid">
+          <article><span class="stat-icon green">$</span><div><small>Ventas de hoy</small><strong>$ 48.720</strong><em class="up">↗ 12% vs. ayer</em></div></article>
+          <article><span class="stat-icon orange">▦</span><div><small>Productos activos</small><strong id="active-product-count">84</strong><em>6 sin stock</em></div></article>
+          <article><span class="stat-icon blue">▤</span><div><small>Pedidos pendientes</small><strong>7</strong><em>3 para entregar hoy</em></div></article>
+          <article><span class="stat-icon red">!</span><div><small>Stock bajo</small><strong id="low-stock-count">4</strong><em class="danger">Requieren atención</em></div></article>
+        </div>
+        <div class="dashboard-grid-wide">
+          <article class="dashboard-card quick-update-card">
+            <div class="card-heading"><div><h2>Actualización rápida</h2><p>Cambiá el precio y sincronizalo en todos lados.</p></div><span class="live-pill"><i></i> En línea</span></div>
+            <div class="quick-product"><span class="product-emoji tomato-bg">🍅</span><div><strong>Tomate americano</strong><small>Verduras · Por kilo</small></div><label>$ <input id="quick-price" type="number" value="89" min="0"></label><button id="quick-save" type="button">Guardar precio</button></div>
+            <div class="sync-targets"><span>Se actualizará en:</span><div><b>✓</b> Punto de venta</div><div><b>✓</b> Balanza</div><div><b>✓</b> Lista mayorista</div></div>
+          </article>
+          <article class="dashboard-card alerts-card">
+            <div class="card-heading"><div><h2>Alertas</h2><p>Para resolver hoy.</p></div><button data-go="stock">Ver stock →</button></div>
+            <div class="alert-row"><span class="product-emoji leaf-bg">🥬</span><div><strong>Lechuga mantecosa</strong><small>Quedan 4 unidades</small></div><em>Stock bajo</em></div>
+            <div class="alert-row"><span class="product-emoji carrot-bg">🥕</span><div><strong>Zanahoria</strong><small>Quedan 8 kg</small></div><em>Stock bajo</em></div>
+            <div class="alert-row"><span class="product-emoji lemon-bg">🍋</span><div><strong>Limón</strong><small>Precio sin actualizar hoy</small></div><em class="warning">Revisar</em></div>
+          </article>
+        </div>
+        <div class="dashboard-grid-bottom">
+          <article class="dashboard-card sync-card"><div class="card-heading"><div><h2>Estado del sistema</h2><p>Todos los canales conectados.</p></div></div><div class="systems"><div><span>🖥</span><p><strong>Punto de venta</strong><small>Sincronizado 09:42</small></p><i>Activo</i></div><div><span>⚖</span><p><strong>Balanza / Etiquetas</strong><small>Archivo listo para exportar</small></p><i>Listo</i></div><div><span>📱</span><p><strong>Lista restaurantes</strong><small>Actualizada automáticamente</small></p><i>Publicada</i></div></div></article>
+          <article class="dashboard-card orders-mini"><div class="card-heading"><div><h2>Próximas entregas</h2><p>Pedidos mayoristas.</p></div><button data-go="pedidos">Ver todos →</button></div><div class="mini-order"><b>10:30</b><span><strong>Restaurante Jacinto</strong><small>12 productos · $4.850</small></span><em>Preparando</em></div><div class="mini-order"><b>12:00</b><span><strong>Bar La Esquina</strong><small>8 productos · $2.320</small></span><em class="ready">Listo</em></div></article>
+        </div>
+      </section>
+
+      <section class="dashboard-view" id="view-productos">
+        <div class="dashboard-heading"><div><span class="eyebrow dark">CATÁLOGO CENTRAL</span><h1>Productos y precios</h1><p>Un cambio acá actualiza todos tus canales.</p></div><button class="dashboard-primary" id="new-product">+ Nuevo producto</button></div>
+        <div class="dashboard-card table-card">
+          <div class="table-toolbar"><label>⌕ <input id="product-search" type="search" placeholder="Buscar por nombre o código"></label><select id="category-filter"><option value="">Todas las categorías</option><option>Verduras</option><option>Frutas</option><option>Almacén</option><option>Procesados</option></select><button id="bulk-update">Importar Excel actual</button></div>
+          <div class="table-wrap"><table><thead><tr><th>Producto</th><th>Código</th><th>Venta</th><th>Precio</th><th>Stock</th><th>Estado</th><th></th></tr></thead><tbody id="products-table"></tbody></table></div>
+        </div>
+      </section>
+
+      <section class="dashboard-view" id="view-ventas">
+        <div class="dashboard-heading"><div><span class="eyebrow dark">PUNTO DE VENTA</span><h1>Ventas y caja</h1><p>Escaneá, cobrá e imprimí el ticket una sola vez.</p></div><span class="cash-open">● Caja abierta · 08:02</span></div>
+        <div class="pos-grid">
+          <article class="dashboard-card pos-sale">
+            <div class="card-heading"><div><h2>Nueva venta</h2><p>Usá el lector o buscá un producto.</p></div><span>Venta #2049</span></div>
+            <label class="barcode-input">▥ <input id="sale-scan" placeholder="Escanear código o escribir producto" autocomplete="off"><button id="sale-add">Agregar</button></label>
+            <div class="sale-lines" id="sale-lines">
+              <div data-sale-line data-amount="111.25"><span class="product-emoji tomato-bg">🍅</span><p><strong>Tomate americano</strong><small>1,25 kg × $ 89</small></p><b>$ 111,25</b><button aria-label="Quitar producto">×</button></div>
+              <div data-sale-line data-amount="90"><span class="product-emoji leaf-bg">🥬</span><p><strong>Lechuga mantecosa</strong><small>2 unidades × $ 45</small></p><b>$ 90</b><button aria-label="Quitar producto">×</button></div>
+            </div>
+            <div class="sale-total"><span>Total</span><strong id="sale-total">$ 201,25</strong></div>
+            <div class="payment-types"><button class="active">Efectivo</button><button>Débito</button><button>Transferencia</button></div>
+            <button class="complete-sale" id="complete-sale">Confirmar venta e imprimir ticket</button>
+          </article>
+          <aside class="pos-side">
+            <article class="dashboard-card anti-duplicate"><span>✓</span><h2>Sin ventas duplicadas</h2><p>La etiqueta identifica el producto y su peso. La venta recién se registra cuando confirmás el cobro en esta pantalla.</p><div><b>1</b> Imprimir etiqueta <i>No descuenta stock</i></div><div><b>2</b> Escanear en caja <i>Prepara la venta</i></div><div><b>3</b> Confirmar cobro <i>Descuenta una vez</i></div></article>
+            <article class="dashboard-card cash-summary"><div class="card-heading"><div><h2>Caja de hoy</h2><p>Desde las 08:02.</p></div></div><dl><div><dt>Efectivo</dt><dd>$ 21.450</dd></div><div><dt>Débito</dt><dd>$ 18.270</dd></div><div><dt>Transferencias</dt><dd>$ 9.000</dd></div><div><dt>Total</dt><dd>$ 48.720</dd></div></dl><button id="close-cash">Cerrar caja y ver reporte</button></article>
+          </aside>
+        </div>
+      </section>
+
+      <section class="dashboard-view" id="view-stock">
+        <div class="dashboard-heading"><div><span class="eyebrow dark">INVENTARIO</span><h1>Control de stock</h1><p>Entradas, salidas y alertas sin contar dos veces.</p></div><button class="dashboard-primary" id="register-movement">+ Registrar movimiento</button></div>
+        <div class="info-banner"><span>ⓘ</span><p><strong>Regla anti-duplicados activa.</strong> Imprimir una etiqueta no genera una venta. El stock solo se descuenta al confirmar la operación en caja.</p></div>
+        <div class="stock-grid" id="stock-grid"></div>
+      </section>
+
+      <section class="dashboard-view" id="view-balanza">
+        <div class="dashboard-heading"><div><span class="eyebrow dark">INTEGRACIONES</span><h1>Balanza y etiquetas</h1><p>Prepará productos y precios para el equipo del local.</p></div></div>
+        <div class="integration-grid">
+          <article class="dashboard-card integration-status"><span class="integration-icon">⚖</span><div><span class="live-pill"><i></i> Conectada</span><h2>Balanza del local</h2><p>Modelo a confirmar · Compatible mediante archivo de productos.</p></div><dl><div><dt>Última exportación</dt><dd>Hoy, 08:15</dd></div><div><dt>Productos incluidos</dt><dd>84</dd></div><div><dt>Formato</dt><dd>CSV / PLU</dd></div></dl><button class="dashboard-primary" id="export-scale">Exportar precios a balanza</button></article>
+          <article class="dashboard-card label-maker"><div class="card-heading"><div><h2>Imprimir etiqueta</h2><p>Generá una etiqueta sin registrar una venta.</p></div></div><label>Producto<select id="label-product"><option>Tomate americano</option><option>Lechuga mantecosa</option><option>Limón</option><option>Zanahoria</option></select></label><label>Peso (kg)<input id="label-weight" type="number" value="1.25" step="0.01" min="0.01"></label><div class="label-preview"><div><b>GUIDOX</b><small>Fresco todos los días</small></div><strong id="preview-product">TOMATE AMERICANO</strong><span id="preview-weight">1,25 kg</span><h3 id="preview-total">$ 111,25</h3><code>║▌║█║▌║║█▌║</code><small>Etiqueta de preparación · No es una venta</small></div><button id="print-label" type="button">Imprimir etiqueta</button></article>
+        </div>
+      </section>
+
+      <section class="dashboard-view" id="view-mayorista">
+        <div class="dashboard-heading"><div><span class="eyebrow dark">RESTAURANTES</span><h1>Lista mayorista</h1><p>Publicá precios y disponibilidad sin enviar otro Excel.</p></div><button class="dashboard-primary" id="publish-list">Publicar cambios</button></div>
+        <div class="info-banner success"><span>✓</span><p><strong>Lista publicada.</strong> Los clientes están viendo los precios actualizados hoy a las 09:42.</p></div>
+        <div class="wholesale-grid"><article class="dashboard-card share-card"><h2>Enlace para clientes</h2><p>Compartilo por WhatsApp. Siempre muestra la última versión publicada.</p><div><code>guidox.uy/lista/restaurantes</code><button id="copy-link">Copiar</button></div><h3>Visibilidad</h3><label class="toggle-row"><span><strong>Mostrar precios</strong><small>Los clientes ven el valor por presentación.</small></span><input type="checkbox" checked></label><label class="toggle-row"><span><strong>Mostrar sin stock</strong><small>Conservar productos agotados en la lista.</small></span><input type="checkbox"></label><label class="toggle-row"><span><strong>Recibir pedidos</strong><small>Botón directo a WhatsApp.</small></span><input type="checkbox" checked></label></article><article class="dashboard-card phone-preview-card"><span>Vista del cliente</span><div class="mini-phone"><div class="mini-phone-head"><b>Guidox</b><small>Lista para restaurantes</small></div><label>⌕ Buscar...</label><div>🍅 <span><b>Tomate americano</b><small>Por kg</small></span><strong id="wholesale-tomato">$ 89</strong></div><div>🥬 <span><b>Lechuga mantecosa</b><small>Unidad</small></span><strong>$ 45</strong></div><div>🍋 <span><b>Limón</b><small>Por kg</small></span><strong>$ 72</strong></div><button>Enviar pedido</button></div></article></div>
+      </section>
+
+      <section class="dashboard-view" id="view-pedidos">
+        <div class="dashboard-heading"><div><span class="eyebrow dark">VENTAS B2B</span><h1>Pedidos</h1><p>Seguimiento de preparación y entrega.</p></div><button class="dashboard-primary" id="new-order">+ Cargar pedido</button></div>
+        <div class="orders-board"><div><h3>Nuevos <span>2</span></h3><article><small>#1048 · 09:32</small><strong>Rotisería Don Tito</strong><p>6 productos · $1.890</p><button>Comenzar preparación</button></article><article><small>#1047 · 09:10</small><strong>Café Central</strong><p>9 productos · $3.450</p><button>Comenzar preparación</button></article></div><div><h3>Preparando <span>1</span></h3><article><small>#1046 · Entrega 10:30</small><strong>Restaurante Jacinto</strong><p>12 productos · $4.850</p><button>Marcar como listo</button></article></div><div><h3>Listos <span>1</span></h3><article><small>#1045 · Entrega 12:00</small><strong>Bar La Esquina</strong><p>8 productos · $2.320</p><button>Confirmar entrega</button></article></div></div>
+      </section>
+
+      <section class="dashboard-view" id="view-equipo">
+        <div class="dashboard-heading"><div><span class="eyebrow dark">ACCESOS</span><h1>Equipo y permisos</h1><p>Cada persona ve y modifica solamente lo que necesita.</p></div><button class="dashboard-primary" id="invite-user">+ Invitar persona</button></div>
+        <div class="dashboard-card team-card"><div class="team-row"><span>GK</span><div><strong>Guido Kaska</strong><small>guido@guidox.uy</small></div><em>Administrador</em><b>Activo</b><button>•••</button></div><div class="team-row"><span>ML</span><div><strong>María López</strong><small>maria@guidox.uy</small></div><em>Empleado de local</em><b>Activo</b><button>•••</button></div></div>
+        <div class="dashboard-card permissions-card"><h2>Permisos por rol</h2><div class="permission-head"><span>Función</span><span>Administrador</span><span>Empleado</span></div><div><span>Ver productos y precios</span><b>✓</b><b>✓</b></div><div><span>Modificar precios</span><b>✓</b><b>✓</b></div><div><span>Registrar ventas y stock</span><b>✓</b><b>✓</b></div><div><span>Ver métricas financieras</span><b>✓</b><b>—</b></div><div><span>Gestionar usuarios</span><b>✓</b><b>—</b></div></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status"><span>✓</span><p><strong>Listo</strong><small id="toast-message">Los cambios fueron guardados.</small></p></div>
+  <div class="modal-backdrop" id="modal-backdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" aria-label="Cerrar">×</button><h2 id="modal-title">Nuevo producto</h2><p id="modal-description">Agregalo al catálogo central.</p><form id="modal-form"><label>Nombre<input id="modal-name" required placeholder="Ej. Papa blanca"></label><div class="modal-fields"><label>Categoría<select id="modal-category"><option>Verduras</option><option>Frutas</option><option>Almacén</option><option>Procesados</option></select></label><label>Venta<select id="modal-unit"><option>Por kilo</option><option>Por unidad</option><option>Por bolsa</option><option>Por cajón</option></select></label></div><div class="modal-fields"><label>Precio<input id="modal-price" type="number" required min="0" placeholder="0"></label><label>Stock inicial<input id="modal-stock" type="number" required min="0" placeholder="0"></label></div><button class="dashboard-primary" type="submit">Guardar producto</button></form></section>
+  </div>
+  <script src="dashboard.js"></script>
+</body>
+</html>

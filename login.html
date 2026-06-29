@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingresar — Guidox Gestión</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="login-body">
+  <a class="back-home" href="index.html">← Volver al sitio</a>
+  <main class="login-shell">
+    <section class="login-side">
+      <a class="brand brand-inverse" href="index.html"><span class="brand-mark">G</span><span>Guidox<small>gestión</small></span></a>
+      <div>
+        <span class="eyebrow light">TODO CONECTADO</span>
+        <h1>Un precio.<br>En todos lados.</h1>
+        <p>Actualizá desde el celular y mantené alineados caja, balanza, etiquetas y lista para restaurantes.</p>
+      </div>
+      <div class="login-feature-list">
+        <span>✓ Catálogo y stock</span><span>✓ Precios desde el celular</span><span>✓ Balanza y etiquetas</span><span>✓ Lista mayorista</span>
+      </div>
+    </section>
+    <section class="login-card">
+      <div class="login-card-head"><span>Acceso al sistema</span><b>Demo</b></div>
+      <h2>Qué bueno verte.</h2>
+      <p>Ingresá para gestionar el negocio.</p>
+      <form id="login-form">
+        <label>Email<input id="email" type="email" value="demo@guidox.uy" autocomplete="username" required></label>
+        <label>Contraseña<input id="password" type="password" value="demo123" autocomplete="current-password" required></label>
+        <div class="form-row"><label class="checkbox"><input type="checkbox" checked> Recordarme</label><a href="#" id="forgot-link">Olvidé mi contraseña</a></div>
+        <p class="login-error" id="login-error" role="alert"></p>
+        <button class="button login-submit" type="submit">Ingresar al panel <span>→</span></button>
+      </form>
+      <div class="demo-credentials"><span>Acceso de demostración</span><code>demo@guidox.uy</code><code>demo123</code></div>
+      <small>Este acceso es parte de un prototipo y no utiliza autenticación real.</small>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
