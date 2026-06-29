@@ -2,7 +2,18 @@
 
 Prototipo estático para presentar una solución de Digital Match Global a un comercio de productos frescos con una línea de abastecimiento a restaurantes.
 
-## Recorrido
+## Deploy en Vercel
+
+El proyecto no necesita compilación ni dependencias: Vercel sirve directamente los archivos HTML, CSS y JavaScript.
+
+1. En Vercel, elegir **Add New → Project**.
+2. Importar `DigitalMatchGlobal/Guidox`.
+3. Vercel leerá `vercel.json`: framework `Other`, sin build y con la raíz como directorio de salida.
+4. Elegir **Deploy**.
+
+Cada push a `main` generará un nuevo deployment. En producción, `cleanUrls` expone `login.html` como `/login` y `dashboard.html` como `/dashboard`.
+
+## Recorrido local
 
 1. Abrir `index.html` para ver la landing pública.
 2. Elegir **Ingresar**.
