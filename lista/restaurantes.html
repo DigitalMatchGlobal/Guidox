@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lista mayorista de productos frescos para restaurantes, bares y cocinas profesionales.">
+  <title>Lista para restaurantes — Guidox</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="wholesale-body">
+  <header class="wholesale-header">
+    <a class="brand" href="../index.html" aria-label="Volver a Guidox">
+      <span class="brand-mark" aria-hidden="true">G</span>
+      <span>Guidox<small>mercado fresco</small></span>
+    </a>
+    <div class="wholesale-header-status"><i></i><span><strong>Lista del día</strong><small>Actualizada hoy · 09:42</small></span></div>
+    <nav>
+      <a href="../index.html">Volver al sitio</a>
+      <a class="nav-login" href="../login.html">Acceso al sistema</a>
+    </nav>
+  </header>
+
+  <main class="wholesale-main">
+    <section class="wholesale-hero">
+      <div>
+        <span class="eyebrow light">EXCLUSIVO PARA GASTRONOMÍA</span>
+        <h1>Precios claros.<br>Pedidos sin vueltas.</h1>
+        <p>Armá tu pedido con disponibilidad y precios del día. Trabajamos por kilo, unidad, bolsa o cajón según cada producto.</p>
+      </div>
+      <aside>
+        <span>¿Es tu primera compra?</span>
+        <strong>Te ayudamos a armarla.</strong>
+        <p>Consultá presentaciones, entregas y mínimos directamente con nosotros.</p>
+        <button type="button" id="sales-help">Hablar con ventas →</button>
+      </aside>
+    </section>
+
+    <section class="wholesale-catalog" aria-labelledby="catalog-title">
+      <div class="catalog-toolbar">
+        <div>
+          <span class="eyebrow dark">DISPONIBILIDAD DE HOY</span>
+          <h2 id="catalog-title">Lista mayorista</h2>
+        </div>
+        <label class="catalog-search">⌕ <input id="catalog-search" type="search" placeholder="Buscar tomate, papa, limón..." autocomplete="off"></label>
+      </div>
+      <div class="catalog-filters" aria-label="Filtrar por categoría">
+        <button class="active" data-category="todos">Todos <span>12</span></button>
+        <button data-category="verduras">Verduras <span>5</span></button>
+        <button data-category="frutas">Frutas <span>3</span></button>
+        <button data-category="procesados">Listos para usar <span>2</span></button>
+        <button data-category="almacen">Almacén <span>2</span></button>
+      </div>
+
+      <div class="catalog-layout">
+        <div class="public-product-grid" id="public-product-grid">
+          <article class="public-product" data-id="tomate" data-category="verduras" data-name="tomate americano">
+            <div class="public-product-art tomato-bg">🍅<em>Disponible</em></div><div class="public-product-copy"><span>Verduras</span><h3>Tomate americano</h3><small>Venta por kilo</small><div><strong>$ 89 <small>/ kg</small></strong><button data-add="tomate" aria-label="Agregar tomate americano">+</button></div></div>
+          </article>
+          <article class="public-product" data-id="lechuga" data-category="verduras" data-name="lechuga mantecosa">
+            <div class="public-product-art leaf-bg">🥬<em>Últimas unidades</em></div><div class="public-product-copy"><span>Verduras</span><h3>Lechuga mantecosa</h3><small>Venta por unidad</small><div><strong>$ 45 <small>/ un.</small></strong><button data-add="lechuga" aria-label="Agregar lechuga mantecosa">+</button></div></div>
+          </article>
+          <article class="public-product" data-id="papa" data-category="verduras" data-name="papa blanca">
+            <div class="public-product-art potato-bg">🥔<em>Disponible</em></div><div class="public-product-copy"><span>Verduras</span><h3>Papa blanca</h3><small>Bolsa de 10 kg</small><div><strong>$ 760 <small>/ bolsa</small></strong><button data-add="papa" aria-label="Agregar papa blanca">+</button></div></div>
+          </article>
+          <article class="public-product" data-id="zanahoria" data-category="verduras" data-name="zanahoria">
+            <div class="public-product-art carrot-bg">🥕<em>Disponible</em></div><div class="public-product-copy"><span>Verduras</span><h3>Zanahoria</h3><small>Bolsa de 10 kg</small><div><strong>$ 590 <small>/ bolsa</small></strong><button data-add="zanahoria" aria-label="Agregar zanahoria">+</button></div></div>
+          </article>
+          <article class="public-product" data-id="cebolla" data-category="verduras" data-name="cebolla">
+            <div class="public-product-art onion-bg">🧅<em>Disponible</em></div><div class="public-product-copy"><span>Verduras</span><h3>Cebolla</h3><small>Venta por kilo</small><div><strong>$ 68 <small>/ kg</small></strong><button data-add="cebolla" aria-label="Agregar cebolla">+</button></div></div>
+          </article>
+          <article class="public-product" data-id="limon" data-category="frutas" data-name="limon">
+            <div class="public-product-art lemon-bg">🍋<em>Disponible</em></div><div class="public-product-copy"><span>Frutas</span><h3>Limón</h3><small>Venta por kilo</small><div><strong>$ 72 <small>/ kg</small></strong><button data-add="limon" aria-label="Agregar limón">+</button></div></div>
+          </article>
+          <article class="public-product" data-id="manzana" data-category="frutas" data-name="manzana roja">
+            <div class="public-product-art apple-bg">🍎<em>Disponible</em></div><div class="public-product-copy"><span>Frutas</span><h3>Manzana roja</h3><small>Venta por kilo</small><div><strong>$ 110 <small>/ kg</small></strong><button data-add="manzana" aria-label="Agregar manzana roja">+</button></div></div>
+          </article>
+          <article class="public-product" data-id="banana" data-category="frutas" data-name="banana ecuatoriana">
+            <div class="public-product-art banana-bg">🍌<em>Disponible</em></div><div class="public-product-copy"><span>Frutas</span><h3>Banana ecuatoriana</h3><small>Venta por kilo</small><div><strong>$ 96 <small>/ kg</small></strong><button data-add="banana" aria-label="Agregar banana">+</button></div></div>
+          </article>
+          <article class="public-product" data-id="ensalada" data-category="procesados" data-name="ensalada lista">
+            <div class="public-product-art prepared-bg">🥗<em>Hecho hoy</em></div><div class="public-product-copy"><span>Listos para usar</span><h3>Ensalada lista</h3><small>Bandeja de 500 g</small><div><strong>$ 130 <small>/ un.</small></strong><button data-add="ensalada" aria-label="Agregar ensalada lista">+</button></div></div>
+          </article>
+          <article class="public-product" data-id="papas-peladas" data-category="procesados" data-name="papas peladas">
+            <div class="public-product-art prepared-bg">🥣<em>Por encargo</em></div><div class="public-product-copy"><span>Listos para usar</span><h3>Papas peladas</h3><small>Bolsa de 5 kg</small><div><strong>$ 520 <small>/ bolsa</small></strong><button data-add="papas-peladas" aria-label="Agregar papas peladas">+</button></div></div>
+          </article>
+          <article class="public-product" data-id="aceite" data-category="almacen" data-name="aceite de girasol">
+            <div class="public-product-art store-bg">🫙<em>Disponible</em></div><div class="public-product-copy"><span>Almacén</span><h3>Aceite de girasol</h3><small>Botella de 900 ml</small><div><strong>$ 145 <small>/ un.</small></strong><button data-add="aceite" aria-label="Agregar aceite">+</button></div></div>
+          </article>
+          <article class="public-product" data-id="arroz" data-category="almacen" data-name="arroz largo fino">
+            <div class="public-product-art store-bg">🍚<em>Disponible</em></div><div class="public-product-copy"><span>Almacén</span><h3>Arroz largo fino</h3><small>Bolsa de 5 kg</small><div><strong>$ 430 <small>/ bolsa</small></strong><button data-add="arroz" aria-label="Agregar arroz">+</button></div></div>
+          </article>
+        </div>
+
+        <aside class="public-order" id="public-order">
+          <div class="public-order-head"><div><span>Tu pedido</span><strong id="order-count">0 productos</strong></div><button type="button" id="clear-order">Vaciar</button></div>
+          <div class="public-order-empty" id="order-empty"><span>🧺</span><strong>Tu pedido está vacío</strong><p>Agregá productos de la lista para preparar tu consulta.</p></div>
+          <div class="public-order-lines" id="order-lines"></div>
+          <div class="public-order-summary" id="order-summary" hidden><div><span>Subtotal estimado</span><strong id="order-total">$ 0</strong></div><small>El total final se confirma según peso y disponibilidad.</small><button type="button" id="prepare-order">Preparar pedido</button></div>
+        </aside>
+      </div>
+      <p class="catalog-empty" id="catalog-empty" hidden>No encontramos productos con esa búsqueda.</p>
+    </section>
+
+    <section class="wholesale-notice"><span>ⓘ</span><p><strong>Esta lista contiene información demostrativa.</strong> Los precios, productos, condiciones y disponibilidad deberán confirmarse antes de publicar el sistema real.</p></section>
+  </main>
+
+  <footer class="wholesale-footer"><a class="brand brand-footer" href="../index.html"><span class="brand-mark">G</span><span>Guidox<small>mercado fresco</small></span></a><p>Abastecimiento para cocinas que no paran.</p><a href="../login.html">Administrar lista →</a></footer>
+
+  <div class="order-modal-backdrop" id="order-modal" hidden>
+    <section class="order-modal" role="dialog" aria-modal="true" aria-labelledby="order-modal-title"><button class="order-modal-close" type="button" aria-label="Cerrar">×</button><span class="order-modal-icon">✓</span><h2 id="order-modal-title">Pedido preparado</h2><p>En el producto final, este resumen se enviará por WhatsApp para confirmar cantidades, entrega y forma de pago.</p><div id="order-modal-summary"></div><button type="button" id="copy-order">Copiar resumen</button><small>Demo: no se envió ningún mensaje.</small></section>
+  </div>
+
+  <div class="toast" id="public-toast" role="status"><span>✓</span><p><strong>Listo</strong><small id="public-toast-message">Producto agregado.</small></p></div>
+  <script src="../list.js"></script>
+</body>
+</html>

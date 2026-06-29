@@ -11,7 +11,7 @@ El proyecto no necesita compilación ni dependencias: Vercel sirve directamente 
 3. Vercel leerá `vercel.json`: framework `Other`, sin build y con la raíz como directorio de salida.
 4. Elegir **Deploy**.
 
-Cada push a `main` generará un nuevo deployment. En producción, `cleanUrls` expone `login.html` como `/login` y `dashboard.html` como `/dashboard`.
+Cada push a `main` generará un nuevo deployment. En producción, `cleanUrls` expone `login.html` como `/login`, `dashboard.html` como `/dashboard` y `lista/restaurantes.html` como `/lista/restaurantes`.
 
 ## Recorrido local
 
@@ -19,6 +19,7 @@ Cada push a `main` generará un nuevo deployment. En producción, `cleanUrls` ex
 2. Elegir **Ingresar**.
 3. Usar `demo@guidox.uy` / `demo123`.
 4. Recorrer el panel desde la navegación lateral.
+5. Abrir la lista pública para restaurantes desde la landing o desde el panel.
 
 ## Funciones demostradas
 
@@ -30,6 +31,7 @@ Cada push a `main` generará un nuevo deployment. En producción, `cleanUrls` ex
 - Exportación CSV de productos para una futura integración con la balanza.
 - Generador visual de etiquetas.
 - Lista online para restaurantes y pedidos.
+- Catálogo público mayorista con búsqueda, categorías y armado de pedido dummy.
 - Usuarios y permisos para incorporar empleados.
 - Diseño adaptable a celular y escritorio.
 
